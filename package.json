@@ -1,13 +1,14 @@
 {
-  "name": "fatloss-tracker-vue",
+  "name": "fatloss-tracker",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
+  "homepage": "https://Jasper-nw.github.io/fatloss-tracker",
   "dependencies": {
     "vue": "^3.5.18"
   },
