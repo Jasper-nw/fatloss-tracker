@@ -1,0 +1,277 @@
+/* TrainingPlan.css */
+
+/* 整体容器 */
+.container {
+    min-height: 100vh;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    background: #f0f9ff;
+    border-radius: 1rem;
+    box-sizing: border-box;
+  }
+  
+  /* header */
+  header {
+    margin-bottom: 2.5rem;
+  }
+  
+  h1 {
+    font-weight: 800;
+    font-size: 3rem;
+    color: #1e40af;
+    margin-bottom: 0.75rem;
+  }
+  
+  header p {
+    color: #3b82f6;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    max-width: 600px;
+  }
+  
+  /* 周切换按钮 */
+  .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    border: none;
+    user-select: none;
+  }
+  
+  .btn-primary {
+    background-color: #60a5fa;
+    color: white;
+  }
+  
+  .btn-primary:hover:not(:disabled) {
+    background-color: #3b82f6;
+  }
+  
+  .btn-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .week-indicator {
+    margin-left: auto;
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #2563eb;
+    user-select: none;
+  }
+  
+  /* flex 布局 */
+  .flex-gap {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .flex-gap-between {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  
+  /* 左右栏宽度统一 */
+  .left-panel,
+  .right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-sizing: border-box;
+  }
+  
+  /* 训练计划卡片 */
+  .plan-item {
+    background-color: white;
+    border-radius: 1.5rem;
+    border: 1px solid #bfdbfe;
+    box-shadow: 0 2px 8px rgba(147, 197, 253, 0.3);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+  
+  .plan-item.done {
+    box-shadow: 0 0 10px 4px #22d3eeaa;
+    border-color: #22d3ee;
+  }
+  
+  .plan-item:not(.done):hover {
+    box-shadow: 0 6px 12px rgba(96,165,250,0.5);
+  }
+  
+  /* 计划头部 */
+  .plan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .plan-day-type {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0ea5e9;
+  }
+  
+  .plan-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e40af;
+    margin-top: 0.25rem;
+  }
+  
+  /* 打卡按钮 */
+  .btn-checkin {
+    flex-shrink: 0;
+    padding: 0.4rem 1.25rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .btn-checkin.done {
+    background-color: #0891b2;
+    border-color: #0891b2;
+    color: white;
+  }
+  
+  .btn-checkin.done:hover {
+    background-color: #0369a1;
+  }
+  
+  .btn-checkin.not-done {
+    background-color: #bfdbfe;
+    border-color: #93c5fd;
+    color: #2563eb;
+  }
+  
+  .btn-checkin.not-done:hover {
+    background-color: #93c5fd;
+  }
+  
+  /* 计划详情 */
+  .plan-details {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #2563eb;
+  }
+  
+  /* 备注卡片 */
+  .note-block {
+    background: white;
+    border-radius: 1.5rem;
+    border: 1px solid #bfdbfe;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(147,197,253,0.3);
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+  
+  /* 备注标签 */
+  .note-label {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #0284c7;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  /* 备注输入框 */
+  .note-textarea {
+    width: 100%;
+    border-radius: 1rem;
+    border: 1px solid #93c5fd;
+    background-color: #eff6ff;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    resize: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    outline: none;
+    color: #1e40af;
+    box-sizing: border-box;
+  }
+  
+  .note-textarea:focus {
+    background-color: white;
+    border-color: #22d3ee;
+    box-shadow: 0 0 8px #22d3eeaa;
+  }
+  
+  /* 操作按钮 */
+  .actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+  }
+  
+  .btn-reset-week {
+    flex: 1;
+    background-color: #ef4444;
+    color: white;
+    font-weight: 700;
+    border-radius: 1rem;
+    padding: 0.75rem 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-reset-week:hover {
+    background-color: #dc2626;
+  }
+  
+  .btn-reset-all {
+    flex: 1;
+    background-color: #3b82f6;
+    color: white;
+    font-weight: 700;
+    border-radius: 1rem;
+    padding: 0.75rem 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-reset-all:hover {
+    background-color: #2563eb;
+  }
+  
+  /* footer */
+  footer {
+    background-color: #e0f2ff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    max-width: 960px;
+    margin: 3rem auto 0 auto;
+    color: #2563eb;
+    user-select: none;
+  }
+  
+  footer h2 {
+    font-weight: 700;
+    color: #1e40af;
+    margin-bottom: 1rem;
+  }
+  
+  footer ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    line-height: 1.5;
+    font-size: 0.875rem;
+  }
+  
